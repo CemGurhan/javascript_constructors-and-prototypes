@@ -85,7 +85,7 @@ describe('dealership tests',()=>{
 
         const dealership1 = new Dealership("test dealership",5,[car1,car2]);
 
-        expect(dealership1.totalValueOfcarsInStock()).toStrictEqual({"price": 210});
+        expect(dealership1.totalValueOfcarsInStock()).toStrictEqual(210);
 
 
     })

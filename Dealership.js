@@ -59,7 +59,7 @@ class Dealership{
 
     totalValueOfcarsInStock(){
 
-        return this.cars_in_stock.reduce((a,b)=> ({price: a.price + b.price}));
+        return this.cars_in_stock.reduce((a,b) =>  a.price + b.price);
     }
     
 }
