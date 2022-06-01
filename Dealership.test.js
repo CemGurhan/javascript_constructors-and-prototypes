@@ -44,17 +44,17 @@ describe('dealership tests',()=>{
 
     });
 
-    // test('return each car manufacturer',()=>{
+    test('return each car manufacturer',()=>{
 
-    //     const car1 = new Car("test manufacturer",10,"test engine");
-    //     const car2 = new Car("cheesey manufactuer",200,"cheesey engine");
+        const car1 = new Car("test manufacturer",10,"test engine");
+        const car2 = new Car("cheesey manufactuer",200,"cheesey engine");
 
-    //     const dealership1 = new Dealership("test dealership",5,[car1,car2]);
+        const dealership1 = new Dealership("test dealership",5,[car1,car2]);
 
-    //     expect(dealership1.returnEachCarsManufacturer().length).toStrictEqual(2);
+        expect(dealership1.returnEachCarsManufacturer().length).toStrictEqual(2);
 
 
-    // })
+    });
 
     test('return cars with certain price',()=>{
 

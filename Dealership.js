@@ -30,8 +30,9 @@ class Dealership{
 
     returnEachCarsManufacturer() {
 
-        const listOfCarManufacturer = [];
-        listOfCarManufacturer.push(this.cars_in_stock.map(car => car.manufacturer));
+       
+        const listOfCarManufacturer =  this.cars_in_stock.map(car => car.manufacturer);
+        
 
         return listOfCarManufacturer;
 
