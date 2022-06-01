@@ -4,14 +4,14 @@ const Dealership = require("./Dealership");
 
 class Customer{
 
-    constructor(name,wallet,car,dealership){
+    constructor(name,wallet,car){
         this.name = name;
         this.wallet = wallet;
         this.car = null;
-        this.dealership = dealership;
+        
     }
 
-    buyCar(carIn){
+    buyCar(carIn,dealership){
 
 
         if(this.wallet >= carIn.price){
@@ -21,7 +21,7 @@ class Customer{
 
             const carIndex = this.dealership?.cars_in_stock?.indexOf(carIn);
 
-            this.dealership?.cars_in_stock?.splice(carIndex,1);
+            dealership?.cars_in_stock?.splice(carIndex,1);
 
             
 
