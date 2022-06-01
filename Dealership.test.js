@@ -56,14 +56,25 @@ describe('dealership tests',()=>{
 
     // })
 
-    test('return cars from manufacturer',()=>{
+    test('return cars with certain price',()=>{
 
         const car1 = new Car("test manufacturer",10,"test engine");
         const car2 = new Car("cheesey manufacturer",200,"cheesey engine");
 
         const dealership1 = new Dealership("test dealership",5,[car1,car2]);
 
-        expect(dealership1.returnCarsFromManufacturer("cheesey manufacturer").length).toBe(1)
+        expect(dealership1.returnCarsFromManufacturer("price",10).length).toBe(1)
+
+    })
+
+    test('return cars with certain engine',()=>{
+
+        const car1 = new Car("test manufacturer",10,"test engine");
+        const car2 = new Car("cheesey manufacturer",200,"cheesey engine");
+
+        const dealership1 = new Dealership("test dealership",5,[car1,car2]);
+
+        expect(dealership1.returnCarsFromManufacturer("engine","test engine").length).toBe(1)
 
     })
 

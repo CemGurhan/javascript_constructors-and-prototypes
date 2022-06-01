@@ -38,9 +38,21 @@ class Dealership{
 
     }
 
-    returnCarsFromManufacturer(manufacturer){
+    returnCarsFromManufacturer(search,value){
 
-       return this.cars_in_stock.filter(car => car.manufacturer === manufacturer);
+        if(search == "price"){
+
+            return this.cars_in_stock.filter(car => car.price === value);
+
+        }
+
+        if(search == "engine"){
+
+            return this.cars_in_stock.filter(car => car.engine_type === value);
+
+        }
+
+       
 
     }
 
