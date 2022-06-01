@@ -30,6 +30,20 @@ describe('dealership tests',()=>{
 
     });
 
+    test('add car to stock over limit',()=>{
+
+        const car1 = new Car("test manufacturer",10,"test engine");
+        const car2 = new Car("cheesey manufactuer",200,"cheesey engine");
+        const car3 = new Car("manufactuer",200,"engine");
+
+        const dealership1 = new Dealership("test dealership",2,[car1,car2]);
+
+
+        expect(dealership1.addcarToStock(car3)).toStrictEqual("Can't add car, max number of cars reached!");
+
+
+    });
+
     // test('return each car manufacturer',()=>{
 
     //     const car1 = new Car("test manufacturer",10,"test engine");
@@ -37,7 +51,7 @@ describe('dealership tests',()=>{
 
     //     const dealership1 = new Dealership("test dealership",5,[car1,car2]);
 
-    //     expect(dealership1.returnEachCarsManufacturer().length).toBe(2);
+    //     expect(dealership1.returnEachCarsManufacturer().length).toStrictEqual(2);
 
 
     // })

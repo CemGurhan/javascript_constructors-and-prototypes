@@ -1,5 +1,4 @@
 const Car = require("./Car");
-const Dealership = require("./Dealership");
 
 describe('car tests',()=>{
 
@@ -18,16 +17,3 @@ describe('car tests',()=>{
 
 })
 
-describe('dealership tests',()=>{
-
-    test('count number of cars in stock',()=>{
-
-        const car1 = new Car("test manufacturer",10,"test engine");
-        const car2 = new Car("cheesey manufactuer",200,"cheesey engine");
-
-
-    })
-
-
-
-})
