@@ -50,3 +50,5 @@ class Dealership{
     }
     
 }
+
+module.exports= Dealership;
