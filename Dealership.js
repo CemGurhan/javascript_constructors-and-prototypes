@@ -46,7 +46,7 @@ class Dealership{
 
     totalValueOfcarsInStock(){
 
-        return this.cars_in_stock.reduce((partialSum,a)=> partialSum + a, 0); //0 initialVal to avoid when array is empty
+        return this.cars_in_stock.reduce((a,b)=> ({price: a.price + b.price}));
     }
     
 }

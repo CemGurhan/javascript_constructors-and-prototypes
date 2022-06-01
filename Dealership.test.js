@@ -30,6 +30,41 @@ describe('dealership tests',()=>{
 
     });
 
+    // test('return each car manufacturer',()=>{
+
+    //     const car1 = new Car("test manufacturer",10,"test engine");
+    //     const car2 = new Car("cheesey manufactuer",200,"cheesey engine");
+
+    //     const dealership1 = new Dealership("test dealership",5,[car1,car2]);
+
+    //     expect(dealership1.returnEachCarsManufacturer().length).toBe(2);
+
+
+    // })
+
+    test('return cars from manufacturer',()=>{
+
+        const car1 = new Car("test manufacturer",10,"test engine");
+        const car2 = new Car("cheesey manufacturer",200,"cheesey engine");
+
+        const dealership1 = new Dealership("test dealership",5,[car1,car2]);
+
+        expect(dealership1.returnCarsFromManufacturer("cheesey manufacturer").length).toBe(1)
+
+    })
+
+    test('totalValueOfCarsInStock',()=>{
+
+        const car1 = new Car("test manufacturer",10,"test engine");
+        const car2 = new Car("cheesey manufacturer",200,"cheesey engine");
+
+        const dealership1 = new Dealership("test dealership",5,[car1,car2]);
+
+        expect(dealership1.totalValueOfcarsInStock()).toStrictEqual({"price": 210});
+
+
+    })
+
 
 
 
